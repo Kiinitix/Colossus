@@ -50,6 +50,10 @@ Python makes implementing certain types of algorithms easy without being insanel
 Symmetric algorithms such as AES or SHA256 implemented in Python will be slow.
 For writing simple programs to cryptanalyze classic ciphers, Python is a pretty solid choice - normally they are weak enough to not require huge amounts of CPU time to crack.  Python has a relative small quantity of lines of code, which makes it less prone to issues, easier to debug, and more maintainable.
 
+# Output
+
 ![Screenshot (1583)](https://user-images.githubusercontent.com/34811605/116817461-161d8c00-ab84-11eb-8a93-fb9a48c05477.png)
+
+# Email
 
 ![Screenshot (1585)](https://user-images.githubusercontent.com/34811605/116817465-1c136d00-ab84-11eb-82ff-28e06a672515.png)
