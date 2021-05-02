@@ -14,7 +14,7 @@ Cloud-based solutions are increasingly in demand around the world. These solutio
 * Decryption software is with the end users only.
 
 # To Do
-- [ ] Using stegnography to hide the key in image and mailing that image insted of simple text mail.
+- [ ] Using steganography to hide the key in image and mailing that image insted of simple text mail.
 - [ ] Using more than two encryption algorithm to make the file even more secure.
 - [ ] Login function for end users
 
