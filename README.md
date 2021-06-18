@@ -58,7 +58,14 @@ For writing simple programs to cryptanalyze classic ciphers, Python is a pretty 
 
 ![Screenshot (1585)](https://user-images.githubusercontent.com/34811605/116817465-1c136d00-ab84-11eb-82ff-28e06a672515.png)
 
-#Core Operation
+# Core Operation
 
 ![Screenshot (1904)](https://user-images.githubusercontent.com/34811605/122540457-4a6ede00-d046-11eb-966d-57cad61d7e99.png)
 
+# Some Facts about the actual Colossus
+
+Colossus was the world’s first electronic, programmable computer created by Tommy Flowers. It was used by the British to read secret German messages (encrypted by the Lorenz cipher) during World War II.
+
+The Colossus was not supposed to decrypt all of a message. It just found close settings for the Lorenz machines. The idea was that the frequencies of letters and numerals in German message would give a start to translating the message itself.
+
+Until the 1970s, these computers were very secret. After the war, all Colossus were broken into bits and designs were destroyed. No one knew the first people to make Colossus. In 2007, engineers made a working prototype of Colossus.
