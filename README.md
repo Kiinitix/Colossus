@@ -57,3 +57,8 @@ For writing simple programs to cryptanalyze classic ciphers, Python is a pretty 
 # Email
 
 ![Screenshot (1585)](https://user-images.githubusercontent.com/34811605/116817465-1c136d00-ab84-11eb-82ff-28e06a672515.png)
+
+#Core Operation
+
+![Screenshot (1904)](https://user-images.githubusercontent.com/34811605/122540457-4a6ede00-d046-11eb-966d-57cad61d7e99.png)
+
