@@ -26,7 +26,7 @@ def upload_file(file_name, bucket, object_name=None):
 
 
 #menu
-print ("Welcome to Sefy")
+print ("Welcome to Colossus")
 print ("# Press 1 to upload file")
 print ("# Press 2 to download file")
 print ("# other key to exit")
