@@ -30,12 +30,9 @@ if (op== 1):
     file_location=input("Enter file name with path: (with \\) ")
     buck=input("Enter the bucket name: ")
     obj=input("Enter the object name: ")
-    try:
-        hybrid.main()
-        upload_file(file_location, buck, obj)
-        print("DONE!")
-    except:
-        print ("Something went wrong!")
+    hybrid.main()
+    upload_file(file_location, buck, obj)
+    print("DONE!")
 elif (op==2):
     buck1= input("Enter bucket name :")
     obj1= input("Enter Object name: ")
