@@ -113,30 +113,19 @@ def encrypt(pk, plaintext):
     print(c)
     return c
 
-def decrypt(pk, ciphertext):
-    d, n = pk
-    m = [chr((char ** d) % n) for char in ciphertext]
-    return m
-
 
 def encryptAES(cipherAESe,plainText):
     return cipherAESe.encrypt(plainText.encode("utf-8"))
 
-def decryptAES(cipherAESd,cipherText):
-    dec= cipherAESd.decrypt(cipherText).decode('utf-8')
-    return dec
-    
-
-
 
 
 def main():
-    print("******************************************************************")
+    print("\n******************************************************************")
     print("******************************************************************")
     print("Welcome...")
     print("We're going to encrypt and decrypt a message using AES and RSA")
     print("******************************************************************")
-    print("******************************************************************")
+    print("******************************************************************\n")
 
     #Obtains public key.
     print("Genering RSA public and Privite keys......")
@@ -161,7 +150,7 @@ def main():
     cipherKey=encrypt(pub,key)
     print("Encrypting the AES symmetric key with RSA......")
 
-    mail_content = ("Hello, \nThis mail contains all those important details that you will need to access your file.. \nIn this mail we are sending decript.py through which you can decrypt the text file from AWS Cloud.\nThank You \n Private Key: " + str(pri) + "\n AES Symmetric Key: " + str(cipherKey))
+    mail_content = ("Hello, \nThis mail contains all those important details that you will need to access your file.. \nIn this mail we are sending decript.py through which you can decrypt the text file from AWS Cloud.\nThank You \n Private Key: " + str(pri) + "\n AES Symmetric Key: " + str(cipherKey)+ "\n Nonce: " + str(nonce))
     sender_address = '<sender-emailID>'
     sender_pass = '<password>'
     receiver_address = '<receiver-emailID'
@@ -170,7 +159,7 @@ def main():
     message['To'] = receiver_address
     message['Subject'] = 'Important Keys for Decryption'
     message.attach(MIMEText(mail_content, 'plain'))
-    attach_file_name = (r'<file-name-with-location>')
+    attach_file_name = (r'decrypt.py')
     attach_file = open(attach_file_name, 'rb') # Open the file as binary mode
     payload = MIMEBase('application', 'octate-stream')
     payload.set_payload((attach_file).read())
