@@ -38,6 +38,18 @@ Before you begin playing with the source code you might need to install deps jus
 For setting up AWS S3 for uploading and featching files from the bucket you first need to setup your AWS account and create a bucket.
 To do so, you can follow the following documentation of [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html).
 
+You probably want to setup IAM users and give the access either though a bucket policy or on the user level. With bucket policies you can easily define what paths users are able to edit and access. When you create an IAM user you also have the option of creating one for Programmatic(CLI) access only which will give you a set of credentials for that user only. Just use aws configure and set the access and token key.
+
+You also probably want to make sure you are using an IAM user yourself as it's generally recommended for security.
+
+To do so, you can go here [AWS Access Key](https://console.aws.amazon.com/iam/home#/security_credentials$access_key) and under the Access keys (access key ID and secret access key) section click on 'Create New Access Key'. And don't forget to note down the AWS Secret Access Key because it is kinda one time thing and if you lose or forget your secret key, you cannot retrieve it. Instead, you have to create a new access key and make the old key inactive.
+
+After noting down the credentials, open the windows cmd and type
+
+`aws configure`
+
+Enter the AWS Access Key ID and AWS Secret Access Key. Now you are good to go!
+
 # Setting up Gmail account
 
 The decryption phase of this process involves the use of your gmail account, although using this feature may affect in your privacy setting but in order to receive mail from third party you need to do this.
