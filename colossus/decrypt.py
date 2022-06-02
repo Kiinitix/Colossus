@@ -1,9 +1,19 @@
+"""
+
+This python file is a part of an open-source
+project Colossus (https://github.com/Kiinitix/Colossus).
+This file is made for the end user to be used for
+decryption process as part of hybrid-cryptography
+implementation used in Colossus.
+
+"""
+
 import secrets
 import random
 import sys
 from Crypto.Cipher import AES
-from Crypto import Random 
-import hybrid
+from Crypto import Random
+#import hybrid
 
 def decryptAES(cipherAESd,cipherText):
     dec= cipherAESd.decrypt(cipherText)
