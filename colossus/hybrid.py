@@ -1,5 +1,8 @@
 """
 
+This python file is a part of an open-source
+project Colossus (https://github.com/Kiinitix/Colossus).
+
 Implementation of Hybrid Cryptography (AES + RSA)
 
 Required fields -> file location for encrypting the content of the text file
@@ -12,6 +15,7 @@ from configparser import ConfigParser
 import secrets
 from Crypto.Cipher import AES
 from Crypto import Random
+import stego
 
 def mainMenu():
     print("\n******************************************************************")
@@ -21,9 +25,9 @@ def mainMenu():
     print("******************************************************************")
     print("******************************************************************\n")
 
-    configur = ConfigParser()
-    configur.read('configurations.ini')
-    location = configur.get('SMTPlogin', 'file_location')
+    #configur = ConfigParser()
+    #configur.read('configurations.ini')
+    #location = configur.get('SMTPlogin', 'file_location')
 
     # Obtains public key.
     print("Genering RSA public and Privite keys......")
@@ -41,15 +45,14 @@ def mainMenu():
 
     print("Encrypting the message with AES......")
     cipherText=euclid.encryptAES(cipherAESe,plainText)
-    f=open(location,"w+b")
-    txt = str(cipherText).encode()
-    f.write(txt)
-    f.close()
-    print("Successfully encrypted the file......")
+    src = input(r"Enter image source: ")
+    stego.Encode(src, cipherText, src)
+
+    print("Successfully encrypted and hidden the text in picture......")
 
     # Encrypt the symmetric key under the key encapsulation scheme, using Alice’s public key.
     cipherKey=euclid.encrypt(pub,key)
     print("Encrypting the AES symmetric key with RSA......")
 
     # sending mail
-    mail.mail(pri, cipherKey, nonce)
+    mail.mail(pri, cipherKey, nonce, src)
