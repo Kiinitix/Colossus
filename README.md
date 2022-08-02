@@ -50,18 +50,20 @@ After noting down the credentials, open the windows cmd and type
 
 Enter the AWS Access Key ID and AWS Secret Access Key. Now you are good to go!
 
-# Setting up Gmail account
+# Setting up Mailtrap account
 
-The decryption phase of this process involves the use of your gmail account, although using this feature may affect in your privacy setting but in order to receive mail from third party you need to do this.
+The decryption phase of this process involves the use of your Mailtrap account.
+You need to sign up for [Mailtrap account.](https://mailtrap.io) After signing up you just need to keep the Mailtrap username and Mailtrap password handy to use their API.
 
-Google now doesn’t accept the login from less secure apps. So you need to go to [Google's Privacy Settings](https://myaccount.google.com/security) scroll to the bottom and turn ON “Allow less secure apps: ON”. You need to do this for the email ID you are adding in your Send as a section.
+Now, naviagate to **Colossus/generate_config.py** and edit the required parameters. You can find the smtp login details [here,](https://mailtrap.io/inboxes) under the **SMPT settings** option. 
+After editing, run this python script, it will generate a **configurations.ini** in the same directory which will be used to easily configure the software for you.
 
+ `python generate_config.py`
+ 
 # Running the App
-In order to run the app in your device, first you need to make some changes in the `hybrid.py` file. You need to modify the value of all those variables whose values are specified in between `< >`.
+In order to run the app on your device run this command,
 
-After changing the values of every variables,
-
-`python3 main.py`
+`python main.py -h`
 
 # Hybrid Cryptography
 
@@ -97,11 +99,17 @@ For writing simple programs to cryptanalyze classic ciphers, Python is a pretty 
 
 # Output
 
-![Screenshot (1583)](https://user-images.githubusercontent.com/34811605/116817461-161d8c00-ab84-11eb-8a93-fb9a48c05477.png)
+![Screenshot (346)](https://user-images.githubusercontent.com/34811605/182296556-4e0a5e05-b099-46a8-8349-b7eee842ed09.png)
+
+![Screenshot (318)](https://user-images.githubusercontent.com/34811605/182296664-3ff35630-8f74-4952-8ad3-c3018205e8d9.png)
+
+![Screenshot (319)](https://user-images.githubusercontent.com/34811605/182296719-e079a955-4597-4711-9ee6-5e01b0e03206.png)
+
 
 # Email
 
-![Screenshot (1585)](https://user-images.githubusercontent.com/34811605/116817465-1c136d00-ab84-11eb-82ff-28e06a672515.png)
+![Screenshot (345)](https://user-images.githubusercontent.com/34811605/182295482-372be1e6-e52a-4e90-9f9f-d9019b107e64.png)
+
 
 # Core Operation
 
