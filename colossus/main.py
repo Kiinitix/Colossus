@@ -23,16 +23,16 @@ def main():
 
     except:
         print ("usage: python3 main.py -t upload -b <bucket-name> -o <object> -i <image-name>")
-        print ("usege: python3 main.py -t download -b <bucket-name> -o <object> -i <image-name>")
-        print("usege: python3 main.py -t decrypt -i <image-name>")
+        print ("usage: python3 main.py -t download -b <bucket-name> -o <object> -i <image-name>")
+        print("usage: python3 main.py -t decrypt -i <image-name>")
         sys.exit(2)
 
     else:
         for opt, arg in opts:
             if opt in ['-h']:
                 print ("usage: python3 main.py -t upload -b <bucket-name> -o <object> -i <image-name>")
-                print ("usege: python3 main.py -t download -b <bucket-name> -o <object> -i <image-name>")
-                print("usege: python3 main.py -t decrypt -i <image-name>")
+                print ("usage: python3 main.py -t download -b <bucket-name> -o <object> -i <image-name>")
+                print ("usage: python3 main.py -t decrypt -i <image-name>")
                 os._exit(0)
 
             elif opt in ['-t']:
@@ -62,4 +62,3 @@ if __name__ == '__main__':
 # Test
 # python main.py -t upload -b sefy0 -i Capture1.PNG
 # python main.py -t download -b sefy0 -o Capture1.PNG -i Capture1.PNG
-#
