@@ -12,8 +12,8 @@ implementation used in Colossus.
 import secrets
 import random
 import sys
-from Crypto.Cipher import AES
-from Crypto import Random
+from Cryptodome.Cipher import AES
+from Cryptodome import Random
 #import hybrid
 import stego
 import numpy as np
