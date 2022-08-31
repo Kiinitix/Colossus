@@ -8,8 +8,8 @@ and RSA (Euclid' algorithm, Euclid's extended algorithm and miller robin techniq
 import secrets
 import random
 import sys
-from Crypto.Cipher import AES
-from Crypto import Random
+from Cryptodome.Cipher import AES
+from Cryptodome import Random
 
 def gcd(a, b):
         '''Euclid's algorithm '''
