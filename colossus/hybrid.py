@@ -13,8 +13,8 @@ import euclid
 import mail
 from configparser import ConfigParser
 import secrets
-from Crypto.Cipher import AES
-from Crypto import Random
+from Cryptodome.Cipher import AES
+from Cryptodome import Random
 import stego
 
 def mainMenu():
