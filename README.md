@@ -31,7 +31,7 @@ cd Colossus
 
 Before you begin playing with the source code you might need to install deps just as shown below;
 
-`pip3 install -r requirements.txt`
+`pip3 install -r requirement.txt`
 
 # Setting up AWS S3
 
