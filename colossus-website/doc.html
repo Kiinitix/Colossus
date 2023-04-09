@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colossus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="colossus-global.css">
+    <link rel="stylesheet" href="colossus-doc.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">Colossus</h1>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="https://github.com/Kiinitix/Colossus" class="link link--dark" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Github</a></li>
+        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn selected">Get Started</li>
+          <li class="js-btn">Dependencies</li>
+          <li class="js-btn">Setting up AWS S3</li>
+          <li class="js-btn">Setting up Mailtrap</li>
+        <li class="js-btn">Running the app</li>
+            <li class="js-btn">Options</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h3 class="section__title">Get Started</h3>
+          <p>To get started with the code on this repo, you need to either clone or download this repo into your machine just as shown below</p>
+            <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ git clone https://github.com/Kiinitix/Colossus
+                $ cd Colossus
+              </code>
+            </pre>
+          </div>
+          </section>
+          <section class="js-section">
+            <h3 class="section__title">Dependencies</h3>
+          <p>Before you begin playing with the source code you might need to install deps just as shown below</p>
+            <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ pip3 install -r requirement.txt
+              </code>
+            </pre>
+          </div>
+          </section>
+            <section class="js-section">
+            <h3 class="section__title">Setting up AWS S3 </h3>
+          <p>For setting up AWS S3 for uploading and featching files from the bucket you first need to setup your AWS account and create a bucket. To do so, you can follow the following documentation of AWS S3. <br><br>You probably want to setup IAM users and give the access either though a bucket policy or on the user level. With bucket policies you can easily define what paths users are able to edit and access. When you create an IAM user you also have the option of creating one for Programmatic(CLI) access only which will give you a set of credentials for that user only. Just use aws configure and set the access and token key.<br><br>You also probably want to make sure you are using an IAM user yourself as it's generally recommended for security.<br><br>To do so, you can go here AWS Access Key and under the Access keys (access key ID and secret access key) section click on 'Create New Access Key'. And don't forget to note down the AWS Secret Access Key because it is kinda one time thing and if you lose or forget your secret key, you cannot retrieve it. Instead, you have to create a new access key and make the old key inactive.<br><br>After noting down the credentials, open the windows cmd and type
+              <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ aws configure
+              </code>
+            </pre>
+          </div>
+            </section>
+            <p>Enter the AWS Access Key ID and AWS Secret Access Key. Now you are good to go!</p>
+            <section class="js-section">
+            <h3 class="section__title">Setting up Mailtrap account</h3>
+          <p>The decryption phase of this process involves the use of your Mailtrap account. You need to sign up for Mailtrap account. After signing up you just need to keep the Mailtrap username and Mailtrap password handy to use their API.<br><br>Now, naviagate to Colossus/generate_config.py and edit the required parameters. You can find the smtp login details here, under the SMPT settings option. After editing, run this python script, it will generate a configurations.ini in the same directory which will be used to easily configure the software for you.</p>
+            <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ python generate_config.py
+              </code>
+            </pre>
+          </div>
+            </section>
+          <section class="js-section">
+            <h3 class="section__title">Running the app</h3>
+          <p>In order to run the app on your device run this command</p>
+            <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ python main.py -h
+              </code>
+            </pre>
+          </div>
+            </section>
+        <section class="js-section">
+          <h3 class="section__title">Options</h3>
+          <table id="customers">
+            <tr>
+              <th>Options</th>
+              <th>Value</th>
+            </tr>
+            <tr>
+              <td>-t</td>
+              <td>select th etype of operation that you want to perform (upload/download/decrypt)</td>
+            </tr>
+            <tr>
+              <td>-b</td>
+              <td>Bucket name</td>
+            </tr>
+            <tr>
+              <td>-o</td>
+              <td>Object name</td>
+            </tr>
+              <tr>
+              <td>-i</td>
+              <td>Image name/location</td>
+            </tr>
+          </table>
+          <hr />
+        </section>
+        
+      </article>
+    </div>
+
+    <footer class="footer">Find more such interesting projects <a href="https://github.com/Kiinitix" target="_blank" class="link link--light">Here</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="colossus.js"></script>
+  </body>
+</html>

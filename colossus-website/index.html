@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Colossus</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="colossus-global.css">
+      <link rel="stylesheet" href="colossus-landing.css">
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a></li>
+        <li class="menu__item"><a href="https://github.com/Kiinitix/Colossus" class="link link--dark" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Colossus</h1>
+      <p class="hero__description">Secure file storage in cloud computing using hybrid cryptography algorithms</p>
+    </div>
+    <div class="hero__terminal">
+      <pre>
+        <!-- Place your demo code here -->
+        <code class="shell-session demo">kabir ~ $ </code>
+      </pre>
+    </div>
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Usage</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="mac">mac</li>
+            <li class="tab" data-tab="linux">linux</li>
+            <li class="tab" data-tab="win">win</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active mac">$  python main.py -h</code>
+            <code class="tab__pane linux">$  python main.py -h</code>
+            <code class="tab__pane win">$  python main.py -h</code>
+          </pre>
+        </div>
+      </div>
+      <div class="feature">
+          <div class="feature__item">
+          <h3 class="section__title">Configuration</h3>
+          <p>Maintain all your settings in a single <span class="code code--inline">configurations.ini</span> file. Never need to redo the setting every single time jotting down a note.</p>
+        </div>
+          <div class="feature__item">
+          <h3 class="section__title">Secure</h3>
+          <p>Encrypt your files in the rest state. No one can get to your secrets! </p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">File Syncing</h3>
+          <p>Save your file in AWS s3 then you can access to it from anywhere.</p>
+        </div>
+
+      </div>
+      
+      <div class="callout">
+        <p>Read our documentation for more detail</p>
+        <a href="doc.html" class="button--primary">Documentation</a>
+      </div>
+    </div>
+    <div class="changelog">
+      <div class="wrapper">
+        <h3 class="section__title">Changelog</h3>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">v0.0.1</h4>
+            <small class="changelog__date">1/6/2022</small>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Design updates</li>
+                <li>Easy Configuration</li>
+                <li>Updated and more detailed documentation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__callout">
+          <a href="https://github.com/Kiinitix/Colossus/releases" target="_blank" class="link link--light class="button--secondary">Checkout Full Log</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">Find more such interesting projects <a href="https://github.com/Kiinitix" target="_blank" class="link link--light">Here</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="colossus.js"></script>
+  </body>
+</html>
